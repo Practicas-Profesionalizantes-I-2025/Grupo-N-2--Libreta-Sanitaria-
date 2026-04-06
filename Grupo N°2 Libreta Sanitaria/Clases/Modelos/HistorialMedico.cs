@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,8 @@ namespace Clases.Modelos
 {
     public class HistorialMedico
     {
-        public int ID { get; set; }
-        public List<Vacuna> Vacunas { get; set; } = new List<Vacuna>();
-        public string Observaciones { get; set; }
+        [Key] public int ID { get; set; }
+        public string? Descripcion { get; set; }
         public Tratamiento_Realizado Tratamiento { get; set; }
 
         public Tipo_Consulta TipoConsulta { get; set; } 
